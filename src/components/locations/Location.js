@@ -1,11 +1,13 @@
 import React from "react";
 
-export default (props) => (
+export default ({ location }) => (
   <section className="location">
-    <h3 className="location__address">{props.location.address}</h3>
-    <div className="location__squareFeet">{props.location.squareFeet}</div>
+    <h3 className="location__address">{location.address}</h3>
+    <div className="location__squareFeet">
+      {location.squareFeet} Square Feet
+    </div>
     <div className="location__handicapAccess">
-      {props.location.handicapAccess}
+      Handicap Access: {String(location.handicapAccess)}
     </div>
   </section>
 );
